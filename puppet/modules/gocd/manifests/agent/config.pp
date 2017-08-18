@@ -23,9 +23,6 @@ class gocd::agent::config {
   validate_string($::gocd::agent::jvm_min_memory)
   validate_string($::gocd::agent::jvm_max_memory)
 
-  validate_re($::gocd::agent::jvm_min_memory, '^\d+[KkGgMm]$')
-  validate_re($::gocd::agent::jvm_max_memory, '^\d+[KkGgMm]$')
-
   file { '/etc/default/go-agent':
     ensure  => present,
     content => template("${module_name}/go-agent.default.erb"),
