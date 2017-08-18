@@ -23,8 +23,8 @@ class gocd::server::config {
   validate_string($::gocd::server::jvm_min_memory)
   validate_string($::gocd::server::jvm_max_memory)
 
-  validate_re($::gocd::server::jvm_min_memory, '^\d+[KkGgMm]$')
-  validate_re($::gocd::server::jvm_max_memory, '^\d+[KkGgMm]$')
+  #validate_re($::gocd::server::jvm_min_memory, '^\d+[KkGgMm]$')
+  #validate_re($::gocd::server::jvm_max_memory, '^\d+[KkGgMm]$')
 
   file { '/etc/default/go-server':
     ensure  => present,
