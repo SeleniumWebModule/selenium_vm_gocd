@@ -1,0 +1,3 @@
+.*
+!.gitignore
+puppet/modules/selenium_md_gocd
